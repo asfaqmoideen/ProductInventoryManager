@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Modify Products";
+}
+
+@model ProductInventoryManager.Models.Product
+
+<div class="text-center">
+    <h1 class="display-4">Modify a product</h1>
+</div>
+
+<form asp-action="AddProductForm" asp-controller="Home">
+
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id" />
+
+    <label class="mt-4">Name</label>
+    <input class="form-control" type="text" placeholder="Give a new Name" asp-for="Name" />
+
+    <label class="mt-4">Price</label>
+    <input class="form-control" type="number" placeholder="0.0" asp-for="Price" />
+
+    <label class="mt-4">Price</label>
+    <input class="form-control" type="number" placeholder="0.0" asp-for="Quantity" />
+
+    <label class="mt-4">Description</label>
+    <input class="form-control" type="text" placeholder="Give a new description" asp-for="Description" />
+
+    <button class="btn btn-primary mt-4" type="submit">Ok</button>
+</form>

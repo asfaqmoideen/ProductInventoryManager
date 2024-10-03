@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+@model List<Product>
+
+
+<div class="text-center">
+    <h1 class="display-4">Products</h1>
+    <br />
+
+    <p>Your expenses </p>
+    <table class="table">
+        <thead>
+            <th>
+                Id 
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Actions
+            </th>
+        </thead>
+        <tbody>
+            @foreach(var product in Model)
+            {
+                <tr>
+                    <td>
+                        @product.Id 
+                    </td>
+                    <td>
+                        @product.Name
+                    </td>
+                    <td>
+                        @product.Quantity
+                    </td>
+                    <td>
+                        @product.Price
+                    </td>
+
+                    <td>
+                        @product.Description  
+                    </td>
+                    <td>
+                        <a asp-action="ModifyProduct" asp-route-id = "@product.Id"> Edit </a>
+                        <a asp-action="RemoveProduct" asp-route-id="@product.Id"> Delete </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
