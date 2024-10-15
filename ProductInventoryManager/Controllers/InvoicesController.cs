@@ -55,7 +55,7 @@ namespace ProductInventoryManager.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CustomerName,IsPaid,Discount,CreatedAt,UpdatedAt,Email")] Invoice invoice)
-        {
+        {   
             if (invoice !=null)
             {
                 _context.Add(invoice);

@@ -13,9 +13,6 @@
         public decimal Discount { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
-
         public string? Email { get; set;  } 
 
 
